@@ -1,5 +1,5 @@
 /* common styles */
-
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:wght@400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,8 @@
   list-style: none;
   text-decoration: none;
   outline: none;
-  font-family: sans-serif;
+  /* font-family: "Cedarville Cursive", cursive; */
+  font-family: "Roboto", sans-serif;
 }
 
 html {
@@ -15,6 +16,82 @@ html {
 }
 /* end common styles */
 
+/* navbar */
+
+.navbar {
+  width: 100%;
+  height: 14rem;
+  background-color: #000;
+  position: fixed;
+  top: -14rem;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.2rem 0.2rem 0.2rem #000;
+  transition: top 0.4s;
+}
+
+.navbar.change {
+  top: 0;
+}
+
+.nav-link {
+  color: #aaa;
+  margin: 0 4rem;
+  /* border: 1px solid tomato; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link i {
+  font-size: 7rem;
+}
+
+.nav-link span {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.menu {
+  width: 4rem;
+  height: 6rem;
+  background-color: #000;
+  position: fixed;
+  top: 1rem;
+  left: 5rem;
+  border-radius: 30rem 30rem 15rem 15rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem #000, -0.1rem -0.1rem 0.1rem #000;
+  cursor: pointer;
+  transition: top 0.4s;
+  z-index: 99;
+}
+
+.menu.change {
+  top: 15rem;
+}
+
+.menu::before {
+  position: absolute;
+  content: "";
+  width: 0.3rem;
+  height: 15rem;
+  background-color: #000;
+  top: -15rem;
+  left: calc(50% - 0.15rem);
+  box-shadow: 0.1rem 0.1rem #000;
+}
+
+/*end navbar */
 /* section -1 */
 .section-1 {
   width: 100%;
@@ -324,3 +401,98 @@ html {
 }
 
 /* end section-4  */
+
+/* responsive */
+
+@media only screen and (max-width: 1400px) {
+  html {
+    font-size: 50%;
+  }
+  .section-2 {
+    height: auto;
+    padding: 10rem 0 12rem 0;
+  }
+  .cards-container {
+    margin-top: 10rem;
+  }
+  .gallery-link {
+    width: 40rem;
+    height: 25rem;
+    margin: 5rem;
+  }
+  .food-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .title-heading {
+    font-size: 9rem;
+    margin: 0 5rem;
+  }
+
+  .sec-1-icons i {
+    font-size: 25rem;
+  }
+  .cards-container {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin: 5rem;
+  }
+  .section-4 {
+    height: 30rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .nav-link {
+    margin: 2rem;
+  }
+  .nav-link i {
+    font-size: 4rem;
+  }
+  .nav-link span {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .title-heading {
+    font-size: 7rem;
+    margin: 0 10rem;
+  }
+  .sec-1-icons i {
+    font-size: 20rem;
+  }
+  .menu {
+    left: 2rem;
+  }
+  .card {
+    flex-wrap: wrap;
+  }
+  .section-4 {
+    height: 40rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .section-4-text {
+    margin-bottom: 8rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  html {
+    font-size: 40%;
+  }
+  .nav-link {
+    margin: 0 0.7rem;
+  }
+  .card {
+    width: 100%;
+  }
+  .gallery-link {
+    width: 100%;
+    height: auto;
+  }
+}

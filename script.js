@@ -1,3 +1,13 @@
+const menu = document.querySelector(".menu");
+const target = document.querySelectorAll(".target");
+
+menu.addEventListener("click", () => {
+  target.forEach((item) => {
+    item.classList.toggle("change");
+    // console.log(item);
+  });
+});
+
 const icons = document.querySelectorAll(".sec-1-icons i");
 
 let i = 1;
