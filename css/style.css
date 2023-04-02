@@ -491,6 +491,10 @@ html {
   .card {
     width: 100%;
   }
+  .food-description {
+    bottom: 12rem;
+    font-size: 1.7rem;
+}
   .gallery-link {
     width: 100%;
     height: auto;
